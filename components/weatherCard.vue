@@ -1,6 +1,6 @@
 <template>
 <div class="">
-	<div class="max-w-sm p-8 mx-auto rounded-lg bg-gray-400 text-coolGray-800">
+	<div class="max-w-sm p-8 mx-auto rounded-lg bg-gray-400 text-coolGray-400">
 		<div class="flex justify-between space-x-8">
 			<div class="flex flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-24 h-24 p-2 text-yellow-400 fill-current">
