@@ -6,18 +6,20 @@
           type="text"
           class="search-bar"
           placeholder="Search..."
+          v-model="query"
+          @keypress="fetchWeather"
         />
       </div>
 
       <div class="weather-wrap">
         <div class="location-box">
-          <div class="location">Awka NG</div>
+          <div class="location">Awka, NG</div>
           <div class="date">Friday 1 October 2021</div>
         </div>
 
         <div class="weather-box">
-          <div class="temp">9°c</div>
-          <div class="weather"></div>
+          <div class="temp">49°c</div>
+          <div class="weather">Clear clouds</div>
         </div>
       </div>
     </main>
@@ -26,7 +28,22 @@
 
 <script>
 export default {
-
+  name: 'app',
+  data () {
+    return {
+      api_key: '997a223d4a27070d4219e925ec124435',
+      url_base: 'https://api.openweathermap.org/data/2.5',
+      query: '',
+      weather: {}
+  }
+},
+methods: {
+  fetchWeather () {
+    if (e.key == "Enter") {
+      fetch(`${this.api_base}weather?q=${this.query}`)
+    }
+  }
+}
 }
 </script>
 
@@ -111,7 +128,7 @@ main {
   padding: 10px 25px;
   color: #FFF;
   font-size: 102px;
-  font-weight: 900;
+  font-weight: 700;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   background-color:rgba(255, 255, 255, 0.25);
   border-radius: 16px;
@@ -122,7 +139,7 @@ main {
 .weather-box .weather {
   color: #FFF;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 400;
   font-style: italic;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
 }
