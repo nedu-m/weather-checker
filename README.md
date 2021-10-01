@@ -1,4 +1,5 @@
 # weather-checker
+Nuxt weather project, api composition from openweathermap.org
 
 ## Build Setup
 
